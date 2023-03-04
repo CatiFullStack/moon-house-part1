@@ -7,6 +7,7 @@ body{
     word-wrap: break-word;
     overflow: break-word;
     letter-spacing: 10px;
+    box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -100,4 +101,108 @@ section.module.parallax-3 {
 h2 {
     text-align: center;
     color: #fff;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background-color: #242424;
+    color: #fff;
+    padding: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    padding: 10px;
+    border: 2px solid #fff;
+}
+
+.titulo::after{
+    content: "";
+    position: relative;
+    border-right: 2px solid white;
+
+    animation: piscar 700ms linear infinite;
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+@keyframes piscar{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.carrossel {
+    position: relative;
+    padding: 15px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.gallery-wrapper {
+    overflow-x: auto;
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.arrow-left, .arrow-right {
+position: absolute;
+top: 0;
+left: 0;
+right: auto;
+bottom: 0;
+font-size: 30px;
+line-height: 250px;
+width: 40px;
+text-align: center;
+color: #fff;
+cursor: pointer;
+border:none;
+background: rgb(47, 47, 47);
+opacity: 0.5;
+transition: all 600ms ease-in-out;
+}
+
+.arrow-right {
+left: auto;
+right: 0;
+}
+
+.arrow-left:hover {
+    opacity: 1;
+}
+
+.arrow-right:hover {
+    opacity: 1;
+}
+
+.item {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: all 600ms ease-in-out;
+}
+
+.current-item {
+    opacity: 1;
+}
+
+.gallery-wrapper::-webkit-scrollbar{
+    display: none;
 }
