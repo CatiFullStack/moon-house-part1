@@ -10,16 +10,18 @@
 </head>
 
 <body>
+
     <div class="wrapper">
         <main>
             <section class="module parallax parallax-1">
                 <h2 class="rellax" data-rellax-speed="-2">Welcome</h2>
             </section>
-            
+
             <section class="module content">
                 <div class="container">
 
-                    <img src="https://media1.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47wt3f8nvt4693p5z1028zkj94o2rez3fn41wz00c4&rid=giphy.gif&ct=g" alt="">
+                    <img src="https://media1.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47wt3f8nvt4693p5z1028zkj94o2rez3fn41wz00c4&rid=giphy.gif&ct=g"
+                        alt="">
                 </div>
             </section>
 
@@ -28,16 +30,20 @@
             <section class="module content">
                 <h2 class="rellax" data-rellax-speed="2">This is moon House</h2>
                 <div class="container">
-                    <img src="https://media1.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47wt3f8nvt4693p5z1028zkj94o2rez3fn41wz00c4&rid=giphy.gif&ct=g" alt="">
+                    <img src="https://media1.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47wt3f8nvt4693p5z1028zkj94o2rez3fn41wz00c4&rid=giphy.gif&ct=g"
+                        alt="">
                 </div>
             </section>
 
             <section class="module parallax parallax-3">
             </section>
-            <h2 class="rellax" data-rellax-speed="2">Are you ready?</h2>
+
             <section class="module content">
+                <h2 class="rellax" data-rellax-speed="2"> Do you love the moon?
+                </h2>
                 <div class="container">
-                    <img src="https://media1.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47wt3f8nvt4693p5z1028zkj94o2rez3fn41wz00c4&rid=giphy.gif&ct=g" alt="">
+                    <img src="https://media1.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47wt3f8nvt4693p5z1028zkj94o2rez3fn41wz00c4&rid=giphy.gif&ct=g"
+                        alt="">
                 </div>
             </section>
 
@@ -45,7 +51,50 @@
 
         </main>
     </div>
+    <h1 class="titulo"></h1>
+    <div class="nav">
+        <nav>
+            <a href="me.hmtl">About me</a>
+            <a href="works.html">Works</a>
+            <a href="contact.hmtl">Contact</a>
 
+        </nav>
+    </div>
+
+    <div class="carrossel">
+        <div class="gallery-wrapper">
+            <button class="arrow-left control" aria-label="Previous image">←</button>
+            <button class="arrow-right control" aria-label="Next image">→</button>
+           <img src="https://i.ibb.co/sqNmWhq/timetecprint.jpg" alt="" class="item current-item">
+            <img src="https://images.pexels.com/photos/596134/pexels-photo-596134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="item current-item">
+            <img src="https://images.pexels.com/photos/596134/pexels-photo-596134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="item current-item">
+            <img src="https://images.pexels.com/photos/596134/pexels-photo-596134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="item current-item">
+        </div>
+    </div>
+
+    <script>
+        const controls = document.querySelectorAll('.control');
+        let currentitems = 0;
+        const items = document.querySelectorAll('.items')
+        const maxitems = items.length;
+
+        
+    </script>
+
+     
+    <script>
+        const msg = "You can see my work and about me";
+        let titulo = document.querySelector('.titulo');
+        for(var i=0;i<msg.length;i++){
+            (function(pos){
+
+                setTimeout(function(){
+                   //console.log(msg.charAt(pos));
+                   titulo.innerHTML += msg.charAt(pos);
+                },200*pos);
+            })(i);
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"></script>
     <script>
         var rellax = new Rellax('.rellax');
